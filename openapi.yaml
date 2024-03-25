@@ -1,0 +1,60 @@
+swagger: "2.0"
+info:
+  title: mySampleAPI
+  description: coe453hw3.
+  version: 1.0.0
+
+host: coe453hw3.apigateway.directed-smoke-412614.cloud.goog
+basePath: /
+schemes:
+  - https
+  - http
+
+paths:
+  /addition:
+    post:
+      operationId: addition
+      summary: add x and y.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://me-central1-directed-smoke-412614.cloudfunctions.net/function-COE453-Task1-addition
+  
+  /subtraction:
+    post:
+      operationId: subtraction
+      summary: sub x and y.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://me-central1-directed-smoke-412614.cloudfunctions.net/function-COE453-Task1-subtraction-1
+
+  /mul:
+    post:
+      operationId: mul
+      summary: mul x and y.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://me-central1-directed-smoke-412614.cloudfunctions.net/function-COE453-Task1-mul-1
+  
+  /div:
+    post:
+      operationId: div
+      summary: div x and y.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://me-central1-directed-smoke-412614.cloudfunctions.net/function-COE453-Task1-div-1
